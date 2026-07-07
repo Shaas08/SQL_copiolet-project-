@@ -1,0 +1,14 @@
+pymysql>=1.1.0
+sqlglot>=23.0.0
+# ^ Used by validator.py for AST-based validation. If it isn't installed,
+#   validator.py automatically falls back to its regex-based check --
+#   nothing breaks, you just lose alias resolution and structural
+#   WHERE-clause detection.
+
+# Optional, for the web UI:
+# streamlit>=1.32.0
+#   pip install streamlit && streamlit run app.py
+
+# The anthropic package is optional -- llm.py calls the API directly over
+# urllib so there's no hard dependency. Install it only if you'd rather
+# use the official SDK; you'd swap ClaudeClient._call to use it instead.
